@@ -1,0 +1,19 @@
+[package]
+name = "silica"
+version = "0.0.1"
+authors = ["ithinuel@gmail.com"]
+description = ""
+
+documentation = ""
+homepage = ""
+repository = ""
+
+readme = "Readme.md"
+
+keywords = ["baremetal", "OS"]
+
+license = "MIT"
+
+[dependencies]
+silica-panic = { path = "../silica-panic" }
+silica-allocator = { path = "../silica-allocator" }
