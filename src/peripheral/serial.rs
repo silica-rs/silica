@@ -20,7 +20,7 @@ pub enum StopBit {
     TwoBits
 }
 
-pub trait Serial : Sized + Read + Write + Receive + Drop {
+pub trait Serial : Read + Write + Receive + Drop {
     fn setup(&mut self, baudrate:usize, word_len: BitCount, parity: Parity, stop_bit: StopBit) -> Result<(), String>;
     fn baudrate(&self) -> usize;
     fn open(&mut self) -> Result<(), String>;

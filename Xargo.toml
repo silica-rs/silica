@@ -1,0 +1,5 @@
+[dependencies.collections]
+stage=1
+
+[dependencies.alloc]
+stage=1
