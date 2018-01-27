@@ -1,2 +1,12 @@
+# cargo files
 target
 Cargo.lock
+
+# IDEA files
+.idea
+
+# vim files
+tags
+*.swp
+*.swo
+*.rustfmt

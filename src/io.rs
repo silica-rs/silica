@@ -1,7 +1,7 @@
-use collections::string::String;
+use alloc::string::String;
 use sync::mpsc::Sender;
 use core::{ptr, cmp};
-use liballoc::raw_vec::RawVec;
+use alloc::raw_vec::RawVec;
 
 #[derive(Debug)]
 pub struct Error {
@@ -9,7 +9,7 @@ pub struct Error {
 }
 
 pub trait Read {
-    fn read(&mut self, dest: &mut [u8]) -> Result<usize, Error>;
+    fn read(&mut self, dest: &mut [u8]) -> Result<usize, String>;
 }
 
 pub trait Receive {
@@ -17,7 +17,7 @@ pub trait Receive {
 }
 
 pub trait Write {
-    fn write(&mut self, dest: &[u8]) -> Result<usize, Error>;
+    fn write(&mut self, dest: &[u8]) -> Result<usize, String>;
 }
 
 pub enum SeekFrom {
@@ -28,12 +28,12 @@ pub enum SeekFrom {
 
 pub trait Seek {
     fn size(&self) -> u64;
-    fn seek(&mut self, pos: SeekFrom) -> Result<u64, Error>;
+    fn seek(&mut self, pos: SeekFrom) -> Result<u64, String>;
 }
 
 pub trait Connect {
-    fn connect() -> Result<(), Error>;
-    fn disconnect() -> Result<(), Error>;
+    fn connect() -> Result<(), String>;
+    fn disconnect() -> Result<(), String>;
 }
 
 

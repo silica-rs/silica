@@ -1,8 +1,8 @@
 
-pub trait Input : Drop {
+pub trait Input {
     fn read(&self) -> bool;
 }
-pub trait Output : Drop {
+pub trait Output {
     fn get_command(&self) -> bool;
     fn write(&mut self, bool) -> bool;
 }

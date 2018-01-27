@@ -1,12 +1,12 @@
 [package]
 name = "silica"
 version = "0.0.1"
-authors = ["ithinuel@gmail.com"]
-description = ""
+authors = ["Wilfried Chauveau <wilfried.chauveau@ithinuel.me>"]
+description = "..."
 
-documentation = ""
-homepage = ""
-repository = ""
+# documentation = ""
+homepage = "http://ithinuel.me"
+repository = "https://github.com/silica-rs/silica"
 
 readme = "Readme.md"
 
@@ -15,5 +15,6 @@ keywords = ["baremetal", "OS"]
 license = "MIT"
 
 [dependencies]
-silica-panic = { path = "../silica-panic" }
-silica-allocator = { path = "../silica-allocator" }
+# silica-panic = { path = "../silica-panic" }
+silica-core-allocator = { path = "../silica-allocator" }
+silica-core-sync = { path = "../silica-core-sync" }

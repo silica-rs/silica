@@ -1,5 +1,5 @@
 use core::cell::UnsafeCell;
-use liballoc::arc::Arc;
+use alloc::arc::Arc;
 use io::Fifo;
 use time::Instant;
 
